@@ -1,0 +1,17 @@
+import java.util.Scanner;
+public class vowels {
+    public static void main(String[] args){
+        Scanner letter = new Scanner(System.in);
+        System.out.print("Enter a string: ");
+        String s1 = letter.nextLine();
+        s1 = s1.toLowerCase();
+        int vowels = 0;
+        for(int i = 0; i<s1.length(); i++){
+            char c1 = s1.charAt(i);
+                if(c1 =='a' || c1 =='e' || c1 =='i' || c1 =='o' || c1 =='u'){
+                    vowels++;
+            }
+        }
+        System.out.print(vowels);
+    }
+}
