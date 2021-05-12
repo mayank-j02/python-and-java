@@ -1,0 +1,25 @@
+import java.util.Scanner;
+public class palindrome_integer {
+    public static void main(String[] args){
+        Scanner pal = new Scanner(System.in);
+        System.out.print("enter the value: ");
+        int r;
+        int sum = 0;
+        int temp;
+        int n = pal.nextInt();
+
+        temp = n;
+        while (n>0){
+            r = n%10;
+            sum = (sum*10) + r;
+            n = n/10;
+        }
+        if(temp==sum){
+            System.out.print("the number is palindrome.");
+        }
+        else{
+            System.out.print("the number is not a palindrome.");
+        }
+    }
+     
+}
