@@ -1,0 +1,13 @@
+import java.util.Scanner;
+public class Without_minus {
+    public static void main(String[] args){
+        Scanner val = new Scanner(System.in);
+        System.out.print("Enter the first value: ");
+        int num1 = val.nextInt();
+        System.out.print("Enter the second valuee: ");
+        int num2 = val.nextInt();
+        int sub;
+        sub = num1+~num2+1;
+        System.out.print(sub);
+    }
+}
