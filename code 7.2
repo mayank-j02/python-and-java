@@ -1,0 +1,18 @@
+import java.util.Scanner;
+public class Strings_2 {
+    public static void main(String[] args){
+    Scanner string = new Scanner(System.in);
+    System.out.print("Enter the first string: ");
+    String s1 = string.nextLine();
+    System.out.print("Enter the second string: ");
+    String s2 = string.nextLine();
+    String s3 = s1.toLowerCase();
+    String s4 = s2.toLowerCase();
+    if(s3.equals(s4)){
+        System.out.print("The strings are same.");
+    }
+    else{
+        System.out.print("The strings are not same.");
+        }
+    }
+}
