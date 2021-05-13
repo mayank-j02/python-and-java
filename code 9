@@ -1,0 +1,36 @@
+import java.util.Scanner;
+public class Time_1 {
+    public static void main(String[] args){
+        long start = 0;
+        long end = 0; 
+        Scanner st = new Scanner(System.in);
+        //StopWatch watch = new StopWatch();
+        System.out.println("Enter 1 to start/end accelaration time: ");
+        int s1 = st.nextInt();
+        int s2 = 2;
+        if (s1 == 1){
+            start = System.nanoTime();
+            s2 = st.nextInt();
+            if (s2 == 1){
+                end = System.nanoTime();
+                float elapsedtime = end - start;
+                System.out.println(elapsedtime/1000000000);
+            }else{
+                System.out.println("invalid second input");
+            }
+        }else if (s1 == 2){
+            start = System.nanoTime();
+            while( s2 != 0 ){
+                s2 = st.nextInt();
+                if( s2 == 1){
+                    end = System.nanoTime();
+                    float elapsedtime = end - start;
+                    System.out.println(elapsedtime/1000000000);
+                    start = end;
+                }else if (s2 == 0){
+                    System.out.println("Session Closed.");
+                }
+            }
+        }
+    }
+}
