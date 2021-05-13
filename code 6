@@ -3,67 +3,77 @@ import java.lang.Math;
 public class BasicCalculator {
     public static void main(String[] args){
         Scanner val = new Scanner(System.in);
-        System.out.println("1-addition");
-        System.out.println("2-Subtraction");
-        System.out.println("3-Multiplication");
-        System.out.println("4-Division");
-        System.out.println("5-Exp");
-        System.out.println("6-sin");
-        System.out.println("7-cos");
-        System.out.println("8-tan");
-        int n = val.nextInt();
-        double num1 = 0;
-        double num2 = 0;
-        double res = 0;
-        double res1 = 0;
-        double res2 = 0;
-        double res3 = 0;
-        if (n == 1 || n == 2 || n == 3 || n == 4 || n == 5){
-        System.out.print("Enter the first number: ");
-        num1 = val.nextDouble();
-        System.out.print("Enter the second number: ");
-        num2 = val.nextDouble();
-        }
-        else{
-            System.out.print("Enter the number: ");
-            num1 = val.nextDouble();
-        }
-        switch(n){
-        case 1:
-        res = num1 + num2;
-        System.out.println(res);
-        break;
-        case 2:
-        res = num1 - num2;
-        System.out.print(res);
-        break;
-        case 3:
-        res = num1*num2;
-        System.out.print(res);
-        break;
-        case 4:
-        res = num1/num2;
-        System.out.print(res);
-        break;
-        case 5:
-        res = Math.pow(num1, num2);
-        System.out.print(res);
-        break;
-        case 6:
-        res1 = Math.sin(num1);
-        res = Math.toDegrees(res1);
-        System.out.print(res);
-        break;
-        case 7:
-        res2 = Math.cos(num1);
-        res = Math.toDegrees(res2);
-        System.out.print(res);
-        break;
-        case 8:
-        res3 = Math.tan(num1);
-        res = Math.toDegrees(res3);
-        System.out.print(res);
-        break;
+        System.out.println("Enter 1 to start session and 0 to end it.");
+        int m = 2;
+        while( m != 0){
+            m = val.nextInt();
+            if(m == 1){
+                System.out.println("1-addition");
+                System.out.println("2-Subtraction");
+                System.out.println("3-Multiplication");
+                System.out.println("4-Division");
+                System.out.println("5-Exp");
+                System.out.println("6-sin");
+                System.out.println("7-cos");
+                System.out.println("8-tan");
+                int n = val.nextInt();
+                double num1 = 0;
+                double num2 = 0;
+                double res = 0;
+                double res1 = 0;
+                double res2 = 0;
+                double res3 = 0;
+                if (n == 1 || n == 2 || n == 3 || n == 4 || n == 5){
+                System.out.print("Enter the first number: ");
+                num1 = val.nextDouble();
+                System.out.print("Enter the second number: ");
+                num2 = val.nextDouble();
+                }
+                else{
+                    System.out.print("Enter the number: ");
+                    num1 = val.nextDouble();
+                }
+                switch(n){
+                case 1:
+                res = num1 + num2;
+                System.out.println(res);
+                break;
+                case 2:
+                res = num1 - num2;
+                System.out.print(res);
+                break;
+                case 3:
+                res = num1*num2;
+                System.out.print(res);
+                break;
+                case 4:
+                res = num1/num2;
+                System.out.print(res);
+                break;
+                case 5:
+                res = Math.pow(num1, num2);
+                System.out.print(res);
+                break;
+                case 6:
+                res1 = Math.sin(num1);
+                res = Math.toDegrees(res1);
+                System.out.print(res);
+                break;
+                case 7:
+                res2 = Math.cos(num1);
+                res = Math.toDegrees(res2);
+                System.out.print(res);
+                break;
+                case 8:
+                res3 = Math.tan(num1);
+                res = Math.toDegrees(res3);
+                System.out.print(res);
+                break;
+                }
+            }else if ( m == 0){
+                System.out.println("Session ended.");
+            }
+            System.out.println();
         }
     }
 }
