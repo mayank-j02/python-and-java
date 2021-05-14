@@ -1,0 +1,32 @@
+import java.util.Scanner;
+public class AsciiString {
+    public static void main(String[] args){
+        Scanner st = new Scanner(System.in);
+        System.out.println("Enter 1 for ascii to string.");
+        System.out.println("Enter 2 for string to ascii.");
+        int x = st.nextInt();
+        if(x == 1){
+            System.out.print("Enter the number of values: ");
+            int a = st.nextInt();
+            int a1[] = new int[a];
+            System.out.println("Enter the values:");
+            for(int i = 0; i <a; i++){
+                a1[i] = st.nextInt();
+            } 
+            System.out.print(a1);
+            for(int j = 0; j<a; j++){
+            System.out.print((char) a1[j]);
+            }
+        }else if (x == 2){
+            Scanner n2 = new Scanner(System.in);
+            System.out.print("Enter the string to be converted in ascii: ");
+            String nam = n2.nextLine();
+            int l1 = nam.length();
+            for(int j = 0; j<l1; j++){
+                char ch = nam.charAt(j);
+                int ascii1 = (int) ch;
+                System.out.print(ascii1+ " ");
+            }
+        }
+    }
+}
