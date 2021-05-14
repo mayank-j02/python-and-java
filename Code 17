@@ -6,16 +6,16 @@ public class AsciiString {
         System.out.println("Enter 2 for string to ascii.");
         int x = st.nextInt();
         if(x == 1){
+            Scanner n1 = new Scanner(System.in);
             System.out.print("Enter the number of values: ");
-            int a = st.nextInt();
+            int a = n1.nextInt();
             int a1[] = new int[a];
             System.out.println("Enter the values:");
             for(int i = 0; i <a; i++){
-                a1[i] = st.nextInt();
+                a1[i] = n1.nextInt();
             } 
-            System.out.print(a1);
             for(int j = 0; j<a; j++){
-            System.out.print((char) a1[j]);
+            System.out.print((char) a1[j]+ " ");
             }
         }else if (x == 2){
             Scanner n2 = new Scanner(System.in);
