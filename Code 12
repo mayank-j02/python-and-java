@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+public class Timestamp {
+    public static void main(String[] args){
+        Scanner time = new Scanner(System.in);
+        System.out.print("Enter time 1: ");
+        String t1 = time.nextLine();
+        System.out.print("Enter the second time: ");
+        String t2 = time.nextLine();
+        System.out.print("Enter the third time: ");
+        String t3 = time.nextLine();
+        int tm1 = Integer.parseInt(t1.substring(0,2));
+        int ts1 = Integer.parseInt(t1.substring(3, 5));
+        int tms1 = Integer.parseInt(t1.substring(6, 8));
+
+        int tm2 = Integer.parseInt(t2.substring(0,2));
+        int ts2 = Integer.parseInt(t2.substring(3, 5));
+        int tms2 = Integer.parseInt(t2.substring(6, 8));
+
+        int tm3 = Integer.parseInt(t3.substring(0,2));
+        int ts3 = Integer.parseInt(t3.substring(3, 5));
+        int tms3 = Integer.parseInt(t3.substring(6, 8));
+
+        int sum1 = tm1*60000 + ts1*1000 + tms1;
+        int sum2 = tm2*60000 + ts2*1000 + tms2;
+        int sum3 = tm3*60000 + ts3*1000 + tms3;
+
+       int min = Math.min(Math.min(sum1, sum2),sum3);
+       int minutes = min/60000;
+       int seconds = (min/1000)%60;
+       int millisec = min -((minutes*60000)+(seconds*1000));
+        System.out.print(minutes+":"+seconds+":"+millisec);
+    }
+}
