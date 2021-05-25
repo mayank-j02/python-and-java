@@ -1,0 +1,22 @@
+public class hello_world {
+    public static void main(String[] args){
+        Intro i = new Intro();
+        i.print_intro();
+
+        inherit j = new inherit();
+        j.print_hw();
+
+        j.print_intro();
+    }
+}
+class inherit extends Intro{
+    public static void print_hw(){
+        System.out.println("Hello World!");
+    }
+}
+
+public class Intro {
+    public static void print_intro() {
+        System.out.println("Hi I am a student of MIT.");
+    }
+}
