@@ -1,0 +1,31 @@
+public class MIT {
+    public static void main(String[] args){
+        student s1 = new student();
+        student s2 = new student();
+        student s3 = new student();
+
+        s1.set("Mayank", 200907276, "ECE");
+        s2.set("Vansh", 256983471, "CSE");
+        s3.set("Vaastav", 745892163, "EEE");
+
+        s1.print();
+        s2.print();
+        s3.print();
+    }
+}
+
+public class student {
+    private String name;
+    private int Registraion_number;
+    private String branch;
+    public void set(String s1, int i1, String s2){
+        name = s1;
+        Registraion_number = i1;
+        branch = s2;
+    }
+    public void print() {
+        System.out.print(name+ " ");
+        System.out.print(Registraion_number+ " ");
+        System.out.print(branch+ " ");
+    }
+}
