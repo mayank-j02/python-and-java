@@ -7,11 +7,11 @@ import java.util.Scanner;
 public class FileRead{
     public static void main(String[] args) throws FileNotFoundException{
 
-        File myObj = new File("D:\\Documents\\mayank.txt");
+        File myObj = new File("D:\\Documents\\filename.txt");
         Scanner myread = new Scanner(myObj);
-        int array[][] = new int[30][30];
+        int array[][] = new int[5][30];
+        int j = 0;
         while (myread.hasNextLine()){
-            int j = 0;
             String a = myread.nextLine();
                 System.out.println(a);
                 //char[] ch = new char[a.length()];
@@ -35,28 +35,35 @@ public class FileRead{
         int row = rep.nextInt();
         System.out.print("Enter the ascii: ");
         int col = rep.nextInt();
-        for(int k = 0;k<30;k++){
-            for(int l = 0;l<30;l++){
+        int l = 0;
+        int k = 0;
+        for(k = 0;k<5;k++){
+            for(l = 0;l<30;l++){
                 if(array[k][l] == 0)
                     continue;
                 if(array[k][l] == row){
                 array[k][l] = col;
                 }
-                System.out.print(array[k][l]+ "\t");
+                //System.out.print("\t" +(char)array[k][l]);
             }
         }
-        File outPrnt = new File("D:\\Documents\\mayank.txt");
+        for(int m = 0;m<5;m++){
+            for(int n = 0;n<30;n++){
+                System.out.print(array[m][n]+ " ");
+            }
+            System.out.println();
+        }
+        File outPrnt = new File("D:\\Documents\\filename.txt");
         PrintWriter out = new PrintWriter(outPrnt);
         for (int i =0;i<5;i++){
-            for(int j = 0; j < 30;j++){ 
-            if(array[i][j]== 0)
+            for(int h = 0; h < 30;h++){
+            if(array[i][h]== 0)
                 continue;
-            else{
-                out.print((char) array[i][j]);
+            else
+                out.print((char) array[i][h]+ " ");
             }
-        }
             out.println();
-        }out.close();
-
+        }
+        out.close();
     }
 }
