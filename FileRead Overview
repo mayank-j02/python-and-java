@@ -1,1 +1,3 @@
 ReadFile is a code that can make changes in a file through the help of the code.
+
+what happens is the code reads the contants of the file and generates ascii value of those contents and then we can change those ascii values and the resultant is seen in or .docx file.
