@@ -1,0 +1,21 @@
+Read data from USB terminal of Arduino and print it on serial monitor.
+
+For the following task i used JSSC library and implemented it for the following code.
+
+******************************/////////////////////////////////////////////////////
+
+int count;
+
+void setup() {
+  // put your setup code here, to run once:
+  Serial.begin(9600);
+  count = 0;
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  String s = "count: " + String(count);
+  Serial.println(s);
+  count++;
+  delay(1000);
+}
