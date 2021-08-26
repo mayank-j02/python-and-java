@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.gpacalculator.HelloController">
+   <children>
+      <Button fx:id="myButton1" layoutX="50.0" layoutY="307.0" mnemonicParsing="false" onAction="#reset" prefHeight="26.0" prefWidth="63.0" text="Reset" />
+      <Button fx:id="myButton2" layoutX="196.0" layoutY="307.0" mnemonicParsing="false" onAction="#addmore" prefHeight="26.0" prefWidth="80.0" text="Add More" />
+      <Label fx:id="myLabel" layoutX="456.0" layoutY="250.0" prefHeight="26.0" prefWidth="80.0" text="GPA = " />
+      <TextField fx:id="myTextField1" layoutX="50.0" layoutY="115.0" />
+      <TextField fx:id="myTextField2" layoutX="263.0" layoutY="116.0" />
+      <Label layoutX="67.0" layoutY="74.0" prefHeight="26.0" prefWidth="80.0" text="Marks" />
+      <Label layoutX="285.0" layoutY="79.0" prefHeight="17.0" prefWidth="63.0" text="Credit" />
+   </children>
+</AnchorPane>
