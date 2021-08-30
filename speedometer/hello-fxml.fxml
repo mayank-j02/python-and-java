@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import eu.hansolo.medusa.Gauge?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="537.0" prefWidth="830.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.speedometer.HelloController">
+   <children>
+      <Button fx:id="myButton2" layoutX="539.0" layoutY="347.0" mnemonicParsing="false" onAction="#Start" prefHeight="34.0" prefWidth="85.0" text="Start" />
+      <Button fx:id="myButton3" layoutX="704.0" layoutY="347.0" mnemonicParsing="false" onAction="#Reset" prefHeight="34.0" prefWidth="85.0" text="Reset" />
+      <LineChart fx:id="myLineChart" layoutX="-1.0" layoutY="-1.0" prefHeight="537.0" prefWidth="509.0">
+        <xAxis>
+          <CategoryAxis label="Time" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis label="Value" side="LEFT" />
+        </yAxis>
+      </LineChart>
+      <Gauge fx:id="myGauge" layoutX="539.0" layoutY="30.0" majorTickSpace="1.0" maxValue="10.0">
+         <averageColor>
+            <Color green="0.7857142686843872" blue="1.0" />
+         </averageColor></Gauge>
+   </children>
+</AnchorPane>
