@@ -78,11 +78,11 @@ public class HelloApplication extends Application {
         final NumberAxis xAxis = new NumberAxis();
         final NumberAxis yAxis = new NumberAxis();
         xAxis.setLabel("Time");
-        yAxis.setLabel("Voltage");
+        yAxis.setLabel("count");
 
         final LineChart<Number,Number> lineChart =
                 new LineChart<>(xAxis,yAxis);
-        lineChart.setTitle("Real Time Line Chart");
+        lineChart.setTitle("Arduino Real time data");
 
         series = new XYChart.Series();
         lineChart.setLegendVisible(false);
