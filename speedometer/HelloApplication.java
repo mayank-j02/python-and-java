@@ -227,7 +227,7 @@ public class HelloApplication extends Application {
         XSSFWorkbook workbook = new XSSFWorkbook();
         XSSFSheet sheet = workbook.createSheet("Arduino Count");
 
-        for (int k = 0; k < 15; k++) {
+        for (int k = 0; k < 1; k++) {
             XSSFRow rowhead = sheet.createRow(k);
             for (int l = 0; l < 1; l++) {
                 rowhead.createCell(l).setCellValue(count);
