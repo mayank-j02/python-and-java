@@ -75,7 +75,6 @@ public class HelloApplication extends Application {
                     }
                 });
 
-        //LineChart
         final NumberAxis xAxis = new NumberAxis();
         final NumberAxis yAxis = new NumberAxis();
         xAxis.setLabel("Time");
@@ -91,11 +90,9 @@ public class HelloApplication extends Application {
         lineChart.setAnimated(false);
         lineChart.setCreateSymbols(false);
 
-        //pre-load with dummy data
         for(int i=0; i<NUM_OF_POINT; i++){
             series.getData().add(new XYChart.Data(i, 0));
         }
-        //
 
         double x = 0, y = 0;
 
@@ -156,16 +153,13 @@ public class HelloApplication extends Application {
                     try {
 
                         byte[] b = serialPort.readBytes();
-                        int value = b[0] & 0xff;    //convert to int
+                        int value = b[0] & 0xff;
                         String st = String.valueOf(value);
                         System.out.println(st);
                         Integer a = Integer.parseInt(st);
 
                         Platform.runLater(() -> {
                             labelValue.setText(st);
-
-
-
 
                             try {
                                 excel(st);
@@ -227,10 +221,10 @@ public class HelloApplication extends Application {
         XSSFWorkbook workbook = new XSSFWorkbook();
         XSSFSheet sheet = workbook.createSheet("Arduino Count");
 
-        for (int k = 0; k < 1; k++) {
-            XSSFRow rowhead = sheet.createRow(k);
-            for (int l = 0; l < 1; l++) {
-                rowhead.createCell(l).setCellValue(count);
+        for (int i = 0; i < 1; i++) {
+            XSSFRow rowhead = sheet.createRow(i);
+            for (int j = 0; j < 1; j++) {
+                rowhead.createCell(j).setCellValue(count);
             }
         }
         FileOutputStream fileOut = null;
@@ -245,7 +239,6 @@ public class HelloApplication extends Application {
 
         System.out.println("The excel file has been created successfully.");
 
-       // Desktop.getDesktop().open(new File("/Users/mayank/Desktop/ExcelCount.xlsx"));
     }
 
     public static void main(String[] args) {launch(args);}
