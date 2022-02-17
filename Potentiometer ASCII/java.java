@@ -159,53 +159,26 @@ public class Main extends Application {
                     try {
 
                         byte[] b = serialPort.readBytes();
-//                      int value = b[0] & 0xff;
 
                             int value0 = b[0];
                             int i0 = Character.getNumericValue(value0);
 
                             int value1 = b[1];
-                        int i1 = Character.getNumericValue(value1);
+                            int i1 = Character.getNumericValue(value1);
 
                             int value2 = b[2];
-                        int i2 = Character.getNumericValue(value2);
+                            int i2 = Character.getNumericValue(value2);
 
                             int value3 = b[3];
-                        int i3 = Character.getNumericValue(value3);
+                            int i3 = Character.getNumericValue(value3);
 
                             int value = i0*1000 + i1*100 + i2*10 + i3;
                         String st = String.valueOf(value);
                         System.out.println(st);
-//                        int term = b[2];
-//                        int term1 = term*(1023/255);
-//                        String st1 = String.valueOf(term1);
-//                        System.out.println(st1);
-//                        System.out.println();
-
-                        //int[] i = serialPort.readIntArray();
-//                      String st = String.valueOf(value);
-                        //System.out.println(st);
-
-
-
 
                         Platform.runLater(() -> {
-                            //labelValue.setText(st);
-
-//                            try {
-//                                excel(st);
-//                            } catch (IOException e) {
-//                                e.printStackTrace();
-//                            }
-//                            for(int j =0;j<10;j++){
-//                                int value = i[j];
-//                                String st = String.valueOf(value);
-//                                System.out.println(st);
                                 gauge.setValue(Double.parseDouble(st));
-                            //}
-                            //gauge1.setValue(Double.parseDouble(st1));
 
-                            //shiftSeriesData((float)value1);
                         });
                     } catch (SerialPortException ex) {
                         Logger.getLogger(Main.class.getName())
@@ -249,30 +222,5 @@ public class Main extends Application {
         disconnectArduino();
         super.stop();
     }
-
-//    public void excel(String count) throws IOException {
-//        String filename = "/Users/mayank/Desktop/ExcelCount.xlsx";
-//        XSSFWorkbook workbook = new XSSFWorkbook();
-//        XSSFSheet sheet = workbook.createSheet("Arduino Count");
-//
-//        for (int i = 0; i < 1; i++) {
-//            XSSFRow rowhead = sheet.createRow(i);
-//            for (int j = 0; j < 1; j++) {
-//                rowhead.createCell(j).setCellValue(count);
-//            }
-//        }
-//        FileOutputStream fileOut = null;
-//        try {
-//            fileOut = new FileOutputStream(filename);
-//            workbook.write(fileOut);
-//            fileOut.close();
-//
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//
-//        System.out.println("The excel file has been updated.");
-//
-//    }
 
     public static void main(String[] args) {launch(args);}
