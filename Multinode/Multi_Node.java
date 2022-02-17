@@ -164,7 +164,7 @@ public class Main extends Application {
                         int value1 = value*(1023/255);
                         String st = String.valueOf(value1);
                         System.out.println(st);
-                        int term = b[2];
+                        int term = b[1];
                         int term1 = term*(1023/255);
                         String st1 = String.valueOf(term1);
                         System.out.println(st1);
