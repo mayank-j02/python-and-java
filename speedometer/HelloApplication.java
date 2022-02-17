@@ -156,7 +156,6 @@ public class HelloApplication extends Application {
                         int value = b[0] & 0xff;
                         String st = String.valueOf(value);
                         System.out.println(st);
-                        Integer a = Integer.parseInt(st);
 
                         Platform.runLater(() -> {
                             labelValue.setText(st);
